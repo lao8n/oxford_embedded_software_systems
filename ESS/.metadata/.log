@@ -1,0 +1,34 @@
+!SESSION 2024-01-23 09:11:12.123 -----------------------------------------------
+eclipse.buildId=Version 1.11.2
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_GB
+Framework arguments:  -keyring /Users/ess04/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/ess04/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-01-23 09:11:54.965
+!MESSAGE Log4j initialized with config file /Users/ess04/oxford_embedded_software_systems/ESS/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-23 09:11:59.458
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.urischeme 4 0 2024-01-23 09:12:03.298
+!MESSAGE /Applications/STM32CubeIDE.app/Contents/Info.plist
+!STACK 0
+java.nio.file.AccessDeniedException: /Applications/STM32CubeIDE.app/Contents/Info.plist
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:90)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:478)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:220)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:2920)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:2963)
+	at org.eclipse.urischeme.internal.registration.FileProvider.newWriter(FileProvider.java:51)
+	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.changePlistFile(RegistrationMacOsX.java:149)
+	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.handleSchemes(RegistrationMacOsX.java:55)
+	at org.eclipse.urischeme.AutoRegisterSchemeHandlersJob.run(AutoRegisterSchemeHandlersJob.java:94)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-01-23 09:14:44.316
+!MESSAGE Indexed 'ess_skeleton' (36 sources, 100 headers) in 6.87 sec: 7,776 declarations; 48,985 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0035%)
