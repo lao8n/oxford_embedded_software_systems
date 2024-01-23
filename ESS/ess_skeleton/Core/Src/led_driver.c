@@ -3,7 +3,7 @@
 void led_init(LED_t *led, uint32_t * port, uint32_t pin){
 	led->port = port;
 	led->pin = pin;
-	(*led->port) &= 0x1000;
+	led_off(led);
 }
 
 void led_on(LED_t * led){
