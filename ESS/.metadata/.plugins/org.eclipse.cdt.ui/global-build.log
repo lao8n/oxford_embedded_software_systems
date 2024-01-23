@@ -1,0 +1,82 @@
+09:19:01 **** Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../USB_HOST/Target/usbh_conf.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"USB_HOST/Target/usbh_conf.d" -MT"USB_HOST/Target/usbh_conf.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/Target/usbh_conf.o"
+arm-none-eabi-gcc "../USB_HOST/Target/usbh_platform.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"USB_HOST/Target/usbh_platform.d" -MT"USB_HOST/Target/usbh_platform.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/Target/usbh_platform.o"
+arm-none-eabi-gcc "../USB_HOST/App/usb_host.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"USB_HOST/App/usb_host.d" -MT"USB_HOST/App/usb_host.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/App/usb_host.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../USB_HOST/App/usb_host.h:30,
+                 from ../USB_HOST/Target/usbh_platform.h:29,
+                 from ../USB_HOST/Target/usbh_platform.c:22:
+../Core/Inc/stm32f4xx_hal_conf.h:292:12: fatal error: stm32f4xx_hal_adc.h: No such file or directory
+  292 |   #include "stm32f4xx_hal_adc.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [USB_HOST/Target/subdir.mk:22: USB_HOST/Target/usbh_platform.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../USB_HOST/App/usb_host.h:30,
+                 from ../USB_HOST/App/usb_host.c:23:
+../Core/Inc/stm32f4xx_hal_conf.h:292:12: fatal error: stm32f4xx_hal_adc.h: No such file or directory
+  292 |   #include "stm32f4xx_hal_adc.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [USB_HOST/App/subdir.mk:19: USB_HOST/App/usb_host.o] Error 1
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../USB_HOST/Target/usbh_conf.h:32,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:28,
+                 from ../USB_HOST/Target/usbh_conf.c:22:
+../Core/Inc/stm32f4xx_hal_conf.h:292:12: fatal error: stm32f4xx_hal_adc.h: No such file or directory
+  292 |   #include "stm32f4xx_hal_adc.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [USB_HOST/Target/subdir.mk:22: USB_HOST/Target/usbh_conf.o] Error 1
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../USB_HOST/Target/usbh_conf.h:32,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:28,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c:22:
+../Core/Inc/stm32f4xx_hal_conf.h:292:12: fatal error: stm32f4xx_hal_adc.h: No such file or directory
+  292 |   #include "stm32f4xx_hal_adc.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Middlewares/ST/STM32_USB_Host_Library/Core/Src/subdir.mk:28: Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.o] Error 1
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../USB_HOST/Target/usbh_conf.h:32,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h:29,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c:21:
+../Core/Inc/stm32f4xx_hal_conf.h:292:12: fatal error: stm32f4xx_hal_adc.h: No such file or directory
+  292 |   #include "stm32f4xx_hal_adc.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Middlewares/ST/STM32_USB_Host_Library/Core/Src/subdir.mk:28: Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.o] Error 1
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../USB_HOST/Target/usbh_conf.h:32,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:28,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h:29,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c:21:
+../Core/Inc/stm32f4xx_hal_conf.h:292:12: fatal error: stm32f4xx_hal_adc.h: No such file or directory
+  292 |   #include "stm32f4xx_hal_adc.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Middlewares/ST/STM32_USB_Host_Library/Core/Src/subdir.mk:28: Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.o] Error 1
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../USB_HOST/Target/usbh_conf.h:32,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:28,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h:29,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c:21:
+../Core/Inc/stm32f4xx_hal_conf.h:292:12: fatal error: stm32f4xx_hal_adc.h: No such file or directory
+  292 |   #include "stm32f4xx_hal_adc.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Middlewares/ST/STM32_USB_Host_Library/Core/Src/subdir.mk:28: Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
