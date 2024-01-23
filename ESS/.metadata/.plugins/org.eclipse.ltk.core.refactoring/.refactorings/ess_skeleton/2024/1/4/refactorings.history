@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ess_skeleton/Core/Src/led_driver&apos; to &apos;led_driver.h&apos;" description="Rename resource &apos;led_driver&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/led_driver" name="led_driver.h" stamp="1706003425581" updateReferences="true"/>
+</session>

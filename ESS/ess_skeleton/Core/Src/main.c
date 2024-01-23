@@ -11,6 +11,7 @@ typedef struct LEDstruct LED_t;
 void led_init(LED_t *led, uint32_t * port, uint32_t pin);
 void led_on(LED_t * led);
 void led_off(LED_t * led);
+void delay_msec(uint32_t delay);
 
 void led_init(LED_t *led, uint32_t * port, uint32_t pin){
 	led->port = port;
@@ -24,6 +25,13 @@ void led_on(LED_t * led){
 
 void led_off(LED_t * led){
 	(*led->port) &=~ (0x1000 << led->pin);
+}
+
+void delay_msec(uint32_t delay){
+	int i = 0;
+	while(i < 20000 * delay){
+		i++;
+	}
 }
 
 int main(void)
@@ -41,8 +49,18 @@ int main(void)
 	uint32_t led_blue_pin=3;
 
 	// Set all the LEDs to on.
+	led_init(&led, port, led_green_pin);
+	led_on(&led);
+	delay_msec(1000);
+	led_init(&led, port, led_red_pin);
+	led_on(&led);
+	delay_msec(1000);
+	led_init(&led, port, led_orange_pin);
+	led_on(&led);
+	delay_msec(1000);
 	led_init(&led, port, led_blue_pin);
 	led_on(&led);
+	delay_msec(1000);
     while(1){
     }
 }

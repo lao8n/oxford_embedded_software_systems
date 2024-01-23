@@ -32,3 +32,12 @@ java.nio.file.AccessDeniedException: /Applications/STM32CubeIDE.app/Contents/Inf
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-01-23 09:14:44.316
 !MESSAGE Indexed 'ess_skeleton' (36 sources, 100 headers) in 6.87 sec: 7,776 declarations; 48,985 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0035%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-01-23 10:26:47.298
+!MESSAGE Indexed 'ess_skeleton' (26 sources, 87 headers) in 3.57 sec: 6,176 declarations; 36,464 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0047%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-01-23 10:27:06.073
+!MESSAGE Indexed 'ess_skeleton' (26 sources, 87 headers) in 2.14 sec: 6,176 declarations; 36,464 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0047%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2024-01-23 10:27:22.007
+!MESSAGE Won't launch debug session since we failed to locate the binary.
