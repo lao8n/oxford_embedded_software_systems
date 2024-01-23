@@ -88,7 +88,21 @@ void brightness_smooth(LED_t * led){
 
 void brightness_switch(LED_t * led1, LED_t * led2){
 	while(1){
-
+		for(uint32_t led1_time = 0; led1_time < 10; led1_time++){
+			// 100ms total
+			uint32_t led2_time = 10 - led1_time;
+			for(uint32_t i = 0; i < 10; i++){
+				// 10ms total
+				// led1 on for led1_time
+				led_on(led1);
+				led_off(led2);
+				delay_msec(led1_time);
+				// led2 on for led2_time
+				led_off(led1);
+				led_on(led2);
+				delay_msec(led2_time);
+			}
+		}
 	}
 }
 
@@ -98,12 +112,15 @@ void lab2(void){
 	/* Initialize peripherals on board */
 	ess_helper_init();
 
-	LED_t led;
+	LED_t led1;
+	LED_t led2;
 	uint32_t * port = (uint32_t*) 0x40020C14;
 	uint32_t led_green_pin=0;
-	led_init(&led, port, led_green_pin);
+	uint32_t led_red_pin=1;
+	led_init(&led1, port, led_green_pin);
+	led_init(&led2, port, led_red_pin);
 
-	brightness_smooth(&led);
+	brightness_switch(&led1, &led2);
 }
 
 int main(void)

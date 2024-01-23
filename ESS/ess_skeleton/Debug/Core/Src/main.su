@@ -3,5 +3,6 @@
 ../Core/Src/main.c:15:6:lab1	40	static
 ../Core/Src/main.c:60:6:brightness	24	static
 ../Core/Src/main.c:71:6:brightness_smooth	32	static
-../Core/Src/main.c:89:6:lab2	24	static
-../Core/Src/main.c:103:5:main	8	static
+../Core/Src/main.c:89:6:brightness_switch	32	static
+../Core/Src/main.c:109:6:lab2	40	static
+../Core/Src/main.c:126:5:main	8	static

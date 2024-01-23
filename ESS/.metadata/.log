@@ -106,3 +106,29 @@ java.lang.NullPointerException
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 14:31:12.661
 !MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 14:37:04.579
+!MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84
+
+!ENTRY org.eclipse.debug.core 4 125 2024-01-23 14:37:39.886
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Source lookup error
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:168)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:473)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:714)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.performLookup(DsfSourceDisplayAdapter.java:223)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.run(DsfSourceDisplayAdapter.java:203)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Stack data not available
+Contains: Stack data not available
+!SUBENTRY 1 org.eclipse.debug.core 4 125 2024-01-23 14:37:39.888
+!MESSAGE Source lookup error
+!SUBENTRY 2 org.eclipse.cdt.dsf 4 10002 2024-01-23 14:37:39.888
+!MESSAGE Stack data not available
+!SUBENTRY 2 org.eclipse.cdt.dsf 4 10002 2024-01-23 14:37:39.888
+!MESSAGE Stack data not available
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 14:37:39.891
+!MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84
