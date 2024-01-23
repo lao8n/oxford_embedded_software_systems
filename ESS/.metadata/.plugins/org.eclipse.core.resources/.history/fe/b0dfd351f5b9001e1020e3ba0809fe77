@@ -37,7 +37,7 @@ int main(void)
 
 	// Set up button press
 	while(1){
-		if(GPIOA->IDR & 0x1){
+		if(GPIOA->IDR){
 			led_on(&led);
 			delay_msec(1000);
 		} else {
