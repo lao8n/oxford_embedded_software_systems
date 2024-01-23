@@ -1,3 +1,4 @@
 ../Core/Src/pwm_driver.c:20:6:pwm_driver_init	24	static
 ../Core/Src/pwm_driver.c:37:6:pwm_driver_set	16	static
 ../Core/Src/pwm_driver.c:59:6:pwm_driver_update	8	static
+../Core/Src/pwm_driver.c:92:6:pwm_driver_fade_update	24	static

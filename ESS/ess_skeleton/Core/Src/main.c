@@ -150,14 +150,14 @@ void lab3(void){
 
 	// set brightness values
 	pwm_driver_set(0, 100);
-	pwm_driver_set(1, 50);
-	pwm_driver_set(2, 25);
-	pwm_driver_set(3, 0);
+	pwm_driver_set(1, 100);
+	pwm_driver_set(2, 100);
+	pwm_driver_set(3, 100);
 
 	// loop
 	while(1){
-		delay_msec(10);
-		pwm_driver_update();
+		delay_msec(1);
+		pwm_driver_fade_update();
 	}
 }
 
