@@ -1,22 +1,10 @@
-16:22:11 **** Incremental Build of configuration Debug for project ess_skeleton ****
+16:39:42 **** Incremental Build of configuration Debug for project ess_skeleton ****
 make -j7 all 
-arm-none-eabi-gcc "../Core/Src/pwm_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/pwm_driver.d" -MT"Core/Src/pwm_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pwm_driver.o"
-../Core/Src/pwm_driver.c: In function 'pwm_driver_fade_update':
-../Core/Src/pwm_driver.c:104:4: warning: implicit declaration of function 'delay_usec'; did you mean 'delay_msec'? [-Wimplicit-function-declaration]
-  104 |    delay_usec(on_time);
-      |    ^~~~~~~~~~
-      |    delay_msec
-arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ess_skeleton.elf
- 
 arm-none-eabi-size   ess_skeleton.elf 
-arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
    text	   data	    bss	    dec	    hex	filename
-  21332	    484	   1628	  23444	   5b94	ess_skeleton.elf
+  21276	    484	   1628	  23388	   5b5c	ess_skeleton.elf
 Finished building: default.size.stdout
  
-Finished building: ess_skeleton.list
- 
 
-16:22:12 Build Finished. 0 errors, 1 warnings. (took 698ms)
+16:39:42 Build Finished. 0 errors, 0 warnings. (took 388ms)
 

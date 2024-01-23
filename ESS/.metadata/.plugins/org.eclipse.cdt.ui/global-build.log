@@ -1355,3 +1355,262 @@ Finished building: default.size.stdout
  
 Finished building: ess_skeleton.list
  
+16:28:15 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pwm_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/pwm_driver.d" -MT"Core/Src/pwm_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pwm_driver.o"
+../Core/Src/led_driver.c: In function 'delay_usec':
+../Core/Src/led_driver.c:29:1: error: expected declaration or statement at end of input
+   29 | }
+      | ^
+../Core/Src/pwm_driver.c: In function 'delay_usec':
+../Core/Src/pwm_driver.c:21:6: error: static declaration of 'pwm_driver_init' follows non-static declaration
+   21 | void pwm_driver_init(LED_t *ch0, LED_t *ch1, LED_t *ch2, LED_t *ch3){
+      |      ^~~~~~~~~~~~~~~
+In file included from ../Core/Src/pwm_driver.c:1:
+../Core/Inc/pwm_driver.h:17:6: note: previous declaration of 'pwm_driver_init' was here
+   17 | void pwm_driver_init(LED_t *ch0, LED_t *ch1, LED_t *ch2, LED_t *ch3);
+      |      ^~~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:38:6: error: static declaration of 'pwm_driver_set' follows non-static declaration
+   38 | void pwm_driver_set(uint8_t channel, uint8_t value){
+      |      ^~~~~~~~~~~~~~
+In file included from ../Core/Src/pwm_driver.c:1:
+../Core/Inc/pwm_driver.h:22:6: note: previous declaration of 'pwm_driver_set' was here
+   22 | void pwm_driver_set(uint8_t channel, uint8_t value);
+      |      ^~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:60:6: error: static declaration of 'pwm_driver_update' follows non-static declaration
+   60 | void pwm_driver_update(void){
+      |      ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/pwm_driver.c:1:
+../Core/Inc/pwm_driver.h:29:6: note: previous declaration of 'pwm_driver_update' was here
+   29 | void pwm_driver_update(void);
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:93:6: error: static declaration of 'pwm_driver_fade_update' follows non-static declaration
+   93 | void pwm_driver_fade_update(void){
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/pwm_driver.c:1:
+../Core/Inc/pwm_driver.h:35:6: note: previous declaration of 'pwm_driver_fade_update' was here
+   35 | void pwm_driver_fade_update(void);
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/led_driver.c:24:6: warning: 'delay_usec' defined but not used [-Wunused-function]
+   24 | void delay_usec(uint32_t delay){
+      |      ^~~~~~~~~~
+../Core/Src/pwm_driver.c:117:1: error: expected declaration or statement at end of input
+  117 | }
+      | ^
+../Core/Src/led_driver.c:17:6: warning: 'delay_msec' defined but not used [-Wunused-function]
+   17 | void delay_msec(uint32_t delay){
+      |      ^~~~~~~~~~
+../Core/Src/led_driver.c:13:6: warning: 'led_off' defined but not used [-Wunused-function]
+   13 | void led_off(LED_t * led){
+      |      ^~~~~~~
+../Core/Src/led_driver.c:9:6: warning: 'led_on' defined but not used [-Wunused-function]
+    9 | void led_on(LED_t * led){
+      |      ^~~~~~
+../Core/Src/led_driver.c:3:6: warning: 'led_init' defined but not used [-Wunused-function]
+    3 | void led_init(LED_t *led, uint32_t * port, uint32_t pin){
+      |      ^~~~~~~~
+At top level:
+../Core/Src/pwm_driver.c:93:6: warning: 'pwm_driver_fade_update' defined but not used [-Wunused-function]
+   93 | void pwm_driver_fade_update(void){
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:60:6: warning: 'pwm_driver_update' defined but not used [-Wunused-function]
+   60 | void pwm_driver_update(void){
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:38:6: warning: 'pwm_driver_set' defined but not used [-Wunused-function]
+   38 | void pwm_driver_set(uint8_t channel, uint8_t value){
+      |      ^~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:21:6: warning: 'pwm_driver_init' defined but not used [-Wunused-function]
+   21 | void pwm_driver_init(LED_t *ch0, LED_t *ch1, LED_t *ch2, LED_t *ch3){
+      |      ^~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:46: Core/Src/pwm_driver.o] Error 1
+In file included from ../Core/Src/main.c:5:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.100.202210260954/tools/arm-none-eabi/include/stdio.h: In function 'delay_usec':
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.100.202210260954/tools/arm-none-eabi/include/stdio.h:687:22: error: invalid storage class for function '__sputc_r'
+  687 | _ELIDABLE_INLINE int __sputc_r(struct _reent *_ptr, int _c, FILE *_p) {
+      |                      ^~~~~~~~~
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.100.202210260954/tools/arm-none-eabi/include/stdio.h:742:1: error: invalid storage class for function '_getchar_unlocked'
+  742 | _getchar_unlocked(void)
+      | ^~~~~~~~~~~~~~~~~
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.100.202210260954/tools/arm-none-eabi/include/stdio.h:751:1: error: invalid storage class for function '_putchar_unlocked'
+  751 | _putchar_unlocked(int _c)
+      | ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:164:5: warning: 'main' is normally a non-static function [-Wmain]
+  164 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:167:1: error: expected declaration or statement at end of input
+  167 | }
+      | ^
+At top level:
+../Core/Src/main.c:164:5: warning: 'main' defined but not used [-Wunused-function]
+  164 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:109:6: warning: 'lab2' defined but not used [-Wunused-function]
+  109 | void lab2(void){
+      |      ^~~~
+../Core/Src/main.c:71:6: warning: 'brightness_smooth' defined but not used [-Wunused-function]
+   71 | void brightness_smooth(LED_t * led){
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:60:6: warning: 'brightness' defined but not used [-Wunused-function]
+   60 | void brightness(LED_t * led, uint32_t on_time, uint32_t off_time){
+      |      ^~~~~~~~~~
+../Core/Src/main.c:15:6: warning: 'lab1' defined but not used [-Wunused-function]
+   15 | void lab1(void){
+      |      ^~~~
+../Core/Src/main.c:7:5: warning: '_write' defined but not used [-Wunused-function]
+    7 | int _write(int file, char *ptr, int len){
+      |     ^~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+16:29:03 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pwm_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/pwm_driver.d" -MT"Core/Src/pwm_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pwm_driver.o"
+../Core/Src/led_driver.c: In function 'delay_usec':
+../Core/Src/led_driver.c:29:1: error: expected declaration or statement at end of input
+   29 | }
+      | ^
+At top level:
+../Core/Src/led_driver.c:24:6: warning: 'delay_usec' defined but not used [-Wunused-function]
+   24 | void delay_usec(uint32_t delay){
+      |      ^~~~~~~~~~
+../Core/Src/led_driver.c:17:6: warning: 'delay_msec' defined but not used [-Wunused-function]
+   17 | void delay_msec(uint32_t delay){
+      |      ^~~~~~~~~~
+../Core/Src/led_driver.c:13:6: warning: 'led_off' defined but not used [-Wunused-function]
+   13 | void led_off(LED_t * led){
+      |      ^~~~~~~
+../Core/Src/led_driver.c:9:6: warning: 'led_on' defined but not used [-Wunused-function]
+    9 | void led_on(LED_t * led){
+      |      ^~~~~~
+../Core/Src/led_driver.c:3:6: warning: 'led_init' defined but not used [-Wunused-function]
+    3 | void led_init(LED_t *led, uint32_t * port, uint32_t pin){
+      |      ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/pwm_driver.c: In function 'delay_usec':
+../Core/Src/pwm_driver.c:21:6: error: static declaration of 'pwm_driver_init' follows non-static declaration
+   21 | void pwm_driver_init(LED_t *ch0, LED_t *ch1, LED_t *ch2, LED_t *ch3){
+      |      ^~~~~~~~~~~~~~~
+In file included from ../Core/Src/pwm_driver.c:1:
+../Core/Inc/pwm_driver.h:17:6: note: previous declaration of 'pwm_driver_init' was here
+   17 | void pwm_driver_init(LED_t *ch0, LED_t *ch1, LED_t *ch2, LED_t *ch3);
+      |      ^~~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:38:6: error: static declaration of 'pwm_driver_set' follows non-static declaration
+   38 | void pwm_driver_set(uint8_t channel, uint8_t value){
+      |      ^~~~~~~~~~~~~~
+In file included from ../Core/Src/pwm_driver.c:1:
+../Core/Inc/pwm_driver.h:22:6: note: previous declaration of 'pwm_driver_set' was here
+   22 | void pwm_driver_set(uint8_t channel, uint8_t value);
+      |      ^~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:60:6: error: static declaration of 'pwm_driver_update' follows non-static declaration
+   60 | void pwm_driver_update(void){
+      |      ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/pwm_driver.c:1:
+../Core/Inc/pwm_driver.h:29:6: note: previous declaration of 'pwm_driver_update' was here
+   29 | void pwm_driver_update(void);
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:93:6: error: static declaration of 'pwm_driver_fade_update' follows non-static declaration
+   93 | void pwm_driver_fade_update(void){
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/pwm_driver.c:1:
+../Core/Inc/pwm_driver.h:35:6: note: previous declaration of 'pwm_driver_fade_update' was here
+   35 | void pwm_driver_fade_update(void);
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:117:1: error: expected declaration or statement at end of input
+  117 | }
+      | ^
+At top level:
+../Core/Src/pwm_driver.c:93:6: warning: 'pwm_driver_fade_update' defined but not used [-Wunused-function]
+   93 | void pwm_driver_fade_update(void){
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:60:6: warning: 'pwm_driver_update' defined but not used [-Wunused-function]
+   60 | void pwm_driver_update(void){
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:38:6: warning: 'pwm_driver_set' defined but not used [-Wunused-function]
+   38 | void pwm_driver_set(uint8_t channel, uint8_t value){
+      |      ^~~~~~~~~~~~~~
+../Core/Src/pwm_driver.c:21:6: warning: 'pwm_driver_init' defined but not used [-Wunused-function]
+   21 | void pwm_driver_init(LED_t *ch0, LED_t *ch1, LED_t *ch2, LED_t *ch3){
+      |      ^~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/pwm_driver.o] Error 1
+In file included from ../Core/Src/main.c:5:
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.100.202210260954/tools/arm-none-eabi/include/stdio.h: In function 'delay_usec':
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.100.202210260954/tools/arm-none-eabi/include/stdio.h:687:22: error: invalid storage class for function '__sputc_r'
+  687 | _ELIDABLE_INLINE int __sputc_r(struct _reent *_ptr, int _c, FILE *_p) {
+      |                      ^~~~~~~~~
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.100.202210260954/tools/arm-none-eabi/include/stdio.h:742:1: error: invalid storage class for function '_getchar_unlocked'
+  742 | _getchar_unlocked(void)
+      | ^~~~~~~~~~~~~~~~~
+/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.100.202210260954/tools/arm-none-eabi/include/stdio.h:751:1: error: invalid storage class for function '_putchar_unlocked'
+  751 | _putchar_unlocked(int _c)
+      | ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:164:5: warning: 'main' is normally a non-static function [-Wmain]
+  164 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:167:1: error: expected declaration or statement at end of input
+  167 | }
+      | ^
+At top level:
+../Core/Src/main.c:164:5: warning: 'main' defined but not used [-Wunused-function]
+  164 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:109:6: warning: 'lab2' defined but not used [-Wunused-function]
+  109 | void lab2(void){
+      |      ^~~~
+../Core/Src/main.c:71:6: warning: 'brightness_smooth' defined but not used [-Wunused-function]
+   71 | void brightness_smooth(LED_t * led){
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:60:6: warning: 'brightness' defined but not used [-Wunused-function]
+   60 | void brightness(LED_t * led, uint32_t on_time, uint32_t off_time){
+      |      ^~~~~~~~~~
+../Core/Src/main.c:15:6: warning: 'lab1' defined but not used [-Wunused-function]
+   15 | void lab1(void){
+      |      ^~~~
+../Core/Src/main.c:7:5: warning: '_write' defined but not used [-Wunused-function]
+    7 | int _write(int file, char *ptr, int len){
+      |     ^~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+16:30:32 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pwm_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/pwm_driver.d" -MT"Core/Src/pwm_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pwm_driver.o"
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  21276	    484	   1628	  23388	   5b5c	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+16:31:17 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  21276	    484	   1628	  23388	   5b5c	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+16:39:42 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21276	    484	   1628	  23388	   5b5c	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
