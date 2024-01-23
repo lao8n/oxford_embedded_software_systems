@@ -126,3 +126,352 @@ Finished building: default.size.stdout
  
 Finished building: ess_skeleton.list
  
+11:22:28 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/led_driver.c:1:
+../Core/Inc/led_driver.h:1: error: unterminated #ifndef
+    1 | #ifndef LED_DRIVER_H
+      | 
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/main.c:4:
+../Core/Inc/led_driver.h:1: error: unterminated #ifndef
+    1 | #ifndef LED_DRIVER_H
+      | 
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:23:16 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/led_driver.c:1:
+../Core/Inc/led_driver.h:1: error: unterminated #ifndef
+    1 | #ifndef LED_DRIVER_H
+      | 
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/main.c:4:
+../Core/Inc/led_driver.h:1: error: unterminated #ifndef
+    1 | #ifndef LED_DRIVER_H
+      | 
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:23:34 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+   6096	     20	   1572	   7688	   1e08	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+12:07:53 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/led_driver.c:1:
+../Core/Inc/led_driver.h:20:9: error: expected ';', identifier or '(' before 'struct'
+   20 | typedef struct Buttonstruct Button_t;
+      |         ^~~~~~
+../Core/Inc/led_driver.h:21:18: error: expected declaration specifiers or '...' before 'Button_t'
+   21 | void button_init(Button_t * b, uint32_t * port);
+      |                  ^~~~~~~~
+../Core/Inc/led_driver.h:22:18: error: expected declaration specifiers or '...' before 'Button_t'
+   22 | void button_loop(Button_t * b);
+      |                  ^~~~~~~~
+../Core/Src/led_driver.c:24:18: error: expected declaration specifiers or '...' before 'Button_t'
+   24 | void button_init(Button_t * b, uint32_t * port){
+      |                  ^~~~~~~~
+../Core/Src/led_driver.c:28:18: error: expected declaration specifiers or '...' before 'Button_t'
+   28 | void button_loop(Button_t * b, LED_t * led){
+      |                  ^~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/main.c:4:
+../Core/Inc/led_driver.h:20:9: error: expected ';', identifier or '(' before 'struct'
+   20 | typedef struct Buttonstruct Button_t;
+      |         ^~~~~~
+../Core/Inc/led_driver.h:21:18: error: expected declaration specifiers or '...' before 'Button_t'
+   21 | void button_init(Button_t * b, uint32_t * port);
+      |                  ^~~~~~~~
+../Core/Inc/led_driver.h:22:18: error: expected declaration specifiers or '...' before 'Button_t'
+   22 | void button_loop(Button_t * b);
+      |                  ^~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:39:2: warning: statement with no effect [-Wunused-value]
+   39 |  Button_t b;
+      |  ^~~~~~~~
+../Core/Src/main.c:39:10: error: expected ';' before 'b'
+   39 |  Button_t b;
+      |          ^~
+      |          ;
+../Core/Src/main.c:40:2: warning: implicit declaration of function 'button_init' [-Wimplicit-function-declaration]
+   40 |  button_init(&b, GPIOA->IDR);
+      |  ^~~~~~~~~~~
+../Core/Src/main.c:40:15: error: 'b' undeclared (first use in this function)
+   40 |  button_init(&b, GPIOA->IDR);
+      |               ^
+../Core/Src/main.c:40:15: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:42:2: warning: implicit declaration of function 'button_loop' [-Wimplicit-function-declaration]
+   42 |  button_loop(&b, &led);
+      |  ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+12:08:19 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/led_driver.c: In function 'button_init':
+../Core/Src/led_driver.c:25:13: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   25 |  (*b->port) = port;
+      |             ^
+../Core/Src/led_driver.c: At top level:
+../Core/Src/led_driver.c:28:6: error: conflicting types for 'button_loop'
+   28 | void button_loop(Button_t * b, LED_t * led){
+      |      ^~~~~~~~~~~
+In file included from ../Core/Src/led_driver.c:1:
+../Core/Inc/led_driver.h:22:6: note: previous declaration of 'button_loop' was here
+   22 | void button_loop(Button_t * b);
+      |      ^~~~~~~~~~~
+../Core/Src/led_driver.c: In function 'button_loop':
+../Core/Src/led_driver.c:29:8: error: expected expression before ')' token
+   29 |  while(){
+      |        ^
+../Core/Src/led_driver.c:31:11: warning: passing argument 1 of 'led_on' from incompatible pointer type [-Wincompatible-pointer-types]
+   31 |    led_on(&led);
+      |           ^~~~
+      |           |
+      |           LED_t ** {aka struct LEDstruct **}
+../Core/Src/led_driver.c:9:21: note: expected 'LED_t *' {aka 'struct LEDstruct *'} but argument is of type 'LED_t **' {aka 'struct LEDstruct **'}
+    9 | void led_on(LED_t * led){
+      |             ~~~~~~~~^~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:40:23: warning: passing argument 2 of 'button_init' makes pointer from integer without a cast [-Wint-conversion]
+   40 |  button_init(&b, GPIOA->IDR);
+In file included from ../Core/Src/main.c:4:
+../Core/Inc/led_driver.h:21:43: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint32_t' {aka 'volatile long unsigned int'}
+   21 | void button_init(Button_t * b, uint32_t * port);
+      |                                ~~~~~~~~~~~^~~~
+../Core/Src/main.c:42:2: error: too many arguments to function 'button_loop'
+   42 |  button_loop(&b, &led);
+      |  ^~~~~~~~~~~
+In file included from ../Core/Src/main.c:4:
+../Core/Inc/led_driver.h:22:6: note: declared here
+   22 | void button_loop(Button_t * b);
+      |      ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+12:08:40 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/led_driver.c: In function 'button_init':
+../Core/Src/led_driver.c:25:13: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   25 |  (*b->port) = port;
+      |             ^
+../Core/Src/led_driver.c: In function 'button_loop':
+../Core/Src/led_driver.c:29:8: error: expected expression before ')' token
+   29 |  while(){
+      |        ^
+../Core/Src/led_driver.c:31:11: warning: passing argument 1 of 'led_on' from incompatible pointer type [-Wincompatible-pointer-types]
+   31 |    led_on(&led);
+      |           ^~~~
+      |           |
+      |           LED_t ** {aka struct LEDstruct **}
+../Core/Src/led_driver.c:9:21: note: expected 'LED_t *' {aka 'struct LEDstruct *'} but argument is of type 'LED_t **' {aka 'struct LEDstruct **'}
+    9 | void led_on(LED_t * led){
+      |             ~~~~~~~~^~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:40:23: warning: passing argument 2 of 'button_init' makes pointer from integer without a cast [-Wint-conversion]
+   40 |  button_init(&b, GPIOA->IDR);
+In file included from ../Core/Src/main.c:4:
+../Core/Inc/led_driver.h:21:43: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint32_t' {aka 'volatile long unsigned int'}
+   21 | void button_init(Button_t * b, uint32_t * port);
+      |                                ~~~~~~~~~~~^~~~
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+12:10:05 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+../Core/Src/led_driver.c: In function 'button_init':
+../Core/Src/led_driver.c:25:13: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   25 |  (*b->port) = (uint32_t*) port;
+      |             ^
+../Core/Src/led_driver.c: In function 'button_loop':
+../Core/Src/led_driver.c:29:8: error: expected expression before ')' token
+   29 |  while(){
+      |        ^
+../Core/Src/led_driver.c:31:11: warning: passing argument 1 of 'led_on' from incompatible pointer type [-Wincompatible-pointer-types]
+   31 |    led_on(&led);
+      |           ^~~~
+      |           |
+      |           LED_t ** {aka struct LEDstruct **}
+../Core/Src/led_driver.c:9:21: note: expected 'LED_t *' {aka 'struct LEDstruct *'} but argument is of type 'LED_t **' {aka 'struct LEDstruct **'}
+    9 | void led_on(LED_t * led){
+      |             ~~~~~~~~^~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+12:13:13 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/led_driver.c:24:32: error: unknown type name 'uint32'; did you mean 'uint32_t'?
+   24 | void button_init(Button_t * b, uint32 port){
+      |                                ^~~~~~
+      |                                uint32_t
+../Core/Src/led_driver.c: In function 'button_loop':
+../Core/Src/led_driver.c:29:8: error: expected expression before ')' token
+   29 |  while(){
+      |        ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:41:23: warning: passing argument 2 of 'button_init' makes pointer from integer without a cast [-Wint-conversion]
+   41 |  button_init(&b, GPIOA->IDR);
+In file included from ../Core/Src/main.c:4:
+../Core/Inc/led_driver.h:21:43: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint32_t' {aka 'volatile long unsigned int'}
+   21 | void button_init(Button_t * b, uint32_t * port);
+      |                                ~~~~~~~~~~~^~~~
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+12:13:32 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/led_driver.c:1:
+../Core/Inc/led_driver.h:21:32: error: unknown type name 'uint32'; did you mean 'uint32_t'?
+   21 | void button_init(Button_t * b, uint32 port);
+      |                                ^~~~~~
+      |                                uint32_t
+../Core/Src/led_driver.c:24:32: error: unknown type name 'uint32'; did you mean 'uint32_t'?
+   24 | void button_init(Button_t * b, uint32 port){
+      |                                ^~~~~~
+      |                                uint32_t
+../Core/Src/led_driver.c: In function 'button_loop':
+../Core/Src/led_driver.c:29:8: error: expected expression before ')' token
+   29 |  while(){
+      |        ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/main.c:4:
+../Core/Inc/led_driver.h:21:32: error: unknown type name 'uint32'; did you mean 'uint32_t'?
+   21 | void button_init(Button_t * b, uint32 port);
+      |                                ^~~~~~
+      |                                uint32_t
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:41:2: warning: implicit declaration of function 'button_init' [-Wimplicit-function-declaration]
+   41 |  button_init(&b, GPIOA->IDR);
+      |  ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+12:13:53 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/led_driver.c: In function 'button_init':
+../Core/Src/led_driver.c:25:13: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   25 |  (*b->port) = (uint32_t*) port;
+      |             ^
+../Core/Src/led_driver.c: In function 'button_loop':
+../Core/Src/led_driver.c:29:8: error: expected expression before ')' token
+   29 |  while(){
+      |        ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+12:15:40 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+../Core/Src/led_driver.c: In function 'button_init':
+../Core/Src/led_driver.c:26:13: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   26 |  (*b->port) = portPtr;
+      |             ^
+../Core/Src/led_driver.c: In function 'button_loop':
+../Core/Src/led_driver.c:30:8: error: expected expression before ')' token
+   30 |  while(){
+      |        ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+12:16:14 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+../Core/Src/led_driver.c: In function 'button_init':
+../Core/Src/led_driver.c:26:13: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   26 |  (*b->port) = portPtr;
+      |             ^
+../Core/Src/led_driver.c: In function 'button_loop':
+../Core/Src/led_driver.c:30:8: error: expected expression before ')' token
+   30 |  while(){
+      |        ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+12:16:32 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+../Core/Src/led_driver.c: In function 'button_init':
+../Core/Src/led_driver.c:26:13: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   26 |  (*b->port) = portPtr;
+      |             ^
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+   6208	     20	   1572	   7800	   1e78	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+12:18:07 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+   6208	     20	   1572	   7800	   1e78	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+12:19:25 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+   6212	     20	   1572	   7804	   1e7c	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+12:20:42 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+   6212	     20	   1572	   7804	   1e7c	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 

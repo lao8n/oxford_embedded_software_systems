@@ -34,6 +34,11 @@ int main(void)
 	led_on(&led);
 	delay_msec(1000);
 	led_off(&led);
-    while(1){
-    }
+
+	// Set up button press
+	Button_t b;
+
+	button_init(&b, GPIOA->IDR);
+	led_init(&led, port, led_blue_pin);
+	button_loop(&b, &led);
 }

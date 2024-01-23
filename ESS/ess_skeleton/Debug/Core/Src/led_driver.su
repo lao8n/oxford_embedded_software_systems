@@ -2,3 +2,5 @@
 ../Core/Src/led_driver.c:9:6:led_on	16	static
 ../Core/Src/led_driver.c:13:6:led_off	16	static
 ../Core/Src/led_driver.c:17:6:delay_msec	24	static
+../Core/Src/led_driver.c:24:6:button_init	16	static
+../Core/Src/led_driver.c:28:6:button_loop	16	static
