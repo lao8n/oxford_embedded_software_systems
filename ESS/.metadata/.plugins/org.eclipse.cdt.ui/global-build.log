@@ -12,3 +12,89 @@ arm-none-eabi-size   ess_skeleton.elf
    6016	     20	   1572	   7608	   1db8	ess_skeleton.elf
 Finished building: default.size.stdout
  
+11:01:01 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/led_driver.c:1:15: error: unknown type name 'LED_t'
+    1 | void led_init(LED_t *led, uint32_t * port, uint32_t pin){
+      |               ^~~~~
+../Core/Src/led_driver.c:1:27: error: unknown type name 'uint32_t'
+    1 | void led_init(LED_t *led, uint32_t * port, uint32_t pin){
+      |                           ^~~~~~~~
+../Core/Src/led_driver.c:1:44: error: unknown type name 'uint32_t'
+    1 | void led_init(LED_t *led, uint32_t * port, uint32_t pin){
+      |                                            ^~~~~~~~
+../Core/Src/led_driver.c:7:13: error: unknown type name 'LED_t'
+    7 | void led_on(LED_t * led){
+      |             ^~~~~
+../Core/Src/led_driver.c:11:14: error: unknown type name 'LED_t'
+   11 | void led_off(LED_t * led){
+      |              ^~~~~
+../Core/Src/led_driver.c:15:17: error: unknown type name 'uint32_t'
+   15 | void delay_msec(uint32_t delay){
+      |                 ^~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:12:2: error: unknown type name 'LED_t'
+   12 |  LED_t led;
+      |  ^~~~~
+../Core/Src/main.c:20:2: warning: implicit declaration of function 'led_init' [-Wimplicit-function-declaration]
+   20 |  led_init(&led, port, led_green_pin);
+      |  ^~~~~~~~
+../Core/Src/main.c:21:2: warning: implicit declaration of function 'led_on' [-Wimplicit-function-declaration]
+   21 |  led_on(&led);
+      |  ^~~~~~
+../Core/Src/main.c:22:2: warning: implicit declaration of function 'delay_msec' [-Wimplicit-function-declaration]
+   22 |  delay_msec(1000);
+      |  ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:02:49 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/led_driver.c:1:
+../Core/Inc/led_driver.h:2:2: error: unknown type name 'uint32_t'
+    2 |  uint32_t * port; // led register
+      |  ^~~~~~~~
+../Core/Inc/led_driver.h:3:2: error: unknown type name 'uint32_t'
+    3 |  uint32_t pin; // 0..15
+      |  ^~~~~~~~
+../Core/Inc/led_driver.h:7:27: error: unknown type name 'uint32_t'
+    7 | void led_init(LED_t *led, uint32_t * port, uint32_t pin);
+      |                           ^~~~~~~~
+../Core/Inc/led_driver.h:7:44: error: unknown type name 'uint32_t'
+    7 | void led_init(LED_t *led, uint32_t * port, uint32_t pin);
+      |                                            ^~~~~~~~
+../Core/Inc/led_driver.h:10:17: error: unknown type name 'uint32_t'
+   10 | void delay_msec(uint32_t delay);
+      |                 ^~~~~~~~
+../Core/Src/led_driver.c:3:27: error: unknown type name 'uint32_t'
+    3 | void led_init(LED_t *led, uint32_t * port, uint32_t pin){
+      |                           ^~~~~~~~
+../Core/Src/led_driver.c:3:44: error: unknown type name 'uint32_t'
+    3 | void led_init(LED_t *led, uint32_t * port, uint32_t pin){
+      |                                            ^~~~~~~~
+../Core/Src/led_driver.c:17:17: error: unknown type name 'uint32_t'
+   17 | void delay_msec(uint32_t delay){
+      |                 ^~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/led_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+11:04:28 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/led_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led_driver.d" -MT"Core/Src/led_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+   6016	     20	   1572	   7608	   1db8	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 

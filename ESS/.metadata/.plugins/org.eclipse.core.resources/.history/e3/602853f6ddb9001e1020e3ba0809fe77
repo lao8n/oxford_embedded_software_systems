@@ -1,0 +1,5 @@
+struct LEDstruct {
+	uint32_t * port; // led register
+	uint32_t pin; // 0..15
+};
+typedef struct LEDstruct LED_t

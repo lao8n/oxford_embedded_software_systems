@@ -1,7 +1,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "ess_helper.h"
-#include "led_driver.h"
 
 int main(void)
 {

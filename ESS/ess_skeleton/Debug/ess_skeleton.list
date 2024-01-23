@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  12 .ARM.attributes 00000030  00000000  00000000  0002000c  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00003a71  00000000  00000000  0002003c  2**0
+ 13 .debug_info   00003b7c  00000000  00000000  0002003c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 00000f02  00000000  00000000  00023aad  2**0
+ 14 .debug_abbrev 00000fa5  00000000  00000000  00023bb8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000430  00000000  00000000  000249b0  2**3
+ 15 .debug_aranges 00000448  00000000  00000000  00024b60  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 00000398  00000000  00000000  00024de0  2**3
+ 16 .debug_ranges 000003a0  00000000  00000000  00024fa8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00020197  00000000  00000000  00025178  2**0
+ 17 .debug_macro  00020394  00000000  00000000  00025348  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00005670  00000000  00000000  0004530f  2**0
+ 18 .debug_line   00005d8a  00000000  00000000  000456dc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000c7c44  00000000  00000000  0004a97f  2**0
+ 19 .debug_str    000c7c5d  00000000  00000000  0004b466  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000050  00000000  00000000  001125c3  2**0
+ 20 .comment      00000050  00000000  00000000  001130c3  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00000ef4  00000000  00000000  00112614  2**2
+ 21 .debug_frame  00000f04  00000000  00000000  00113114  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -610,10 +610,7 @@ void ess_helper_init() {
  8000652:	bd80      	pop	{r7, pc}
 
 08000654 <led_init>:
-void led_init(LED_t *led, uint32_t * port, uint32_t pin);
-void led_on(LED_t * led);
-void led_off(LED_t * led);
-void delay_msec(uint32_t delay);
+#include "led_driver.h"
 
 void led_init(LED_t *led, uint32_t * port, uint32_t pin){
  8000654:	b480      	push	{r7}
@@ -710,6 +707,9 @@ void delay_msec(uint32_t delay){
 	...
 
 080006ec <main>:
+#include "main.h"
+#include "ess_helper.h"
+#include "led_driver.h"
 
 int main(void)
 {
@@ -741,9 +741,9 @@ int main(void)
  800070c:	60fb      	str	r3, [r7, #12]
 
 	// Set all the LEDs to on.
-	led_init(&led, port, led_blue_pin);
+	led_init(&led, port, led_green_pin);
  800070e:	1d3b      	adds	r3, r7, #4
- 8000710:	68fa      	ldr	r2, [r7, #12]
+ 8000710:	69ba      	ldr	r2, [r7, #24]
  8000712:	69f9      	ldr	r1, [r7, #28]
  8000714:	4618      	mov	r0, r3
  8000716:	f7ff ff9d 	bl	8000654 <led_init>
