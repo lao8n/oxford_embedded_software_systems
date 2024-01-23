@@ -1,0 +1,116 @@
+#include "pwm_driver.h"
+#include <assert.h>
+
+struct pwm_state {
+	uint32_t counter;
+	uint32_t ch0_compare;
+	uint32_t ch1_compare;
+	uint32_t ch2_compare;
+	uint32_t ch3_compare;
+	LED_t * ch0;
+	LED_t * ch1;
+	LED_t * ch2;
+	LED_t * ch3;
+};
+
+// assumes only one pwm_driver instance in the system
+static struct pwm_state state;
+
+// initialize pwm driver
+void pwm_driver_init(LED_t *ch0, LED_t *ch1, LED_t *ch2, LED_t *ch3){
+	// start counter at 0
+	state.counter = 0;
+
+	// set all channels to off
+	state.ch0_compare = 0;
+	state.ch1_compare = 0;
+	state.ch2_compare = 0;
+	state.ch3_compare = 0;
+
+	// store pointer for each led driver
+	state.ch0 = ch0;
+	state.ch1 = ch1;
+	state.ch2 = ch2;
+	state.ch3 = ch3;
+}
+
+void pwm_driver_set(uint8_t channel, uint8_t value){
+	// bounds check
+	assert(channel >= 0);
+	assert(channel < 4);
+
+	// update compare register
+	switch (channel){
+	case 0:
+		state.ch0_compare = value;
+		break;
+	case 1:
+		state.ch1_compare = value;
+		break;
+	case 2:
+		state.ch2_compare = value;
+		break;
+	case 3:
+		state.ch3_compare = value;
+	// no default as have assertions
+	}
+}
+
+void pwm_driver_update(void){
+	// update ch0
+	if(state.ch0_compare > state.counter){
+		led_on(state.ch0);
+	} else {
+		led_off(state.ch0);
+	}
+	// update ch1
+	if(state.ch1_compare > state.counter){
+		led_on(state.ch1);
+	} else {
+		led_off(state.ch1);
+	}
+	// update ch2
+	if(state.ch2_compare > state.counter){
+		led_on(state.ch2);
+	} else {
+		led_off(state.ch2);
+	}
+	// update ch3
+	if(state.ch3_compare > state.counter){
+		led_on(state.ch3);
+	} else {
+		led_off(state.ch3);
+	}
+
+	// update counter value
+	if(state.counter++ > PWM_MAX){
+		state.counter = 0;
+	}
+}
+
+// takes 1s
+void pwm_driver_fade_update(void){
+	// set on for on_time / PWM_MAX % of the time
+	for(uint32_t on_time = 0; on_time < PWM_MAX; on_time++){
+		// 100ms total
+		uint32_t off_time = PWM_MAX - on_time;
+		for(uint32_t i = 0; i < PWM_MAX; i++){
+			// on for on_time ms
+			led_on(state.ch0);
+			led_on(state.ch1);
+			led_on(state.ch2);
+			led_on(state.ch3);
+			delay_usec(on_time * 10);
+			// off for off_time ms
+			led_off(state.ch0);
+			led_off(state.ch1);
+			led_off(state.ch2);
+			led_off(state.ch3);
+			delay_usec(off_time * 10);
+		}
+	}
+	// update counter value
+	if(state.counter++ > PWM_MAX){
+		state.counter = 0;
+	}
+}

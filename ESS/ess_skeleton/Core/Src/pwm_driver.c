@@ -1,5 +1,6 @@
 #include "pwm_driver.h"
 #include <assert.h>
+#include "led_driver.h"
 
 struct pwm_state {
 	uint32_t counter;
@@ -90,23 +91,23 @@ void pwm_driver_update(void){
 
 // takes 1s
 void pwm_driver_fade_update(void){
-	for(uint32_t on_time = 0; on_time < 10; on_time++){
+	// set on for on_time / PWM_MAX % of the time
+	for(uint32_t on_time = 0; on_time < PWM_MAX; on_time++){
 		// 100ms total
-		uint32_t off_time = 10 - on_time;
-		for(uint32_t i = 0; i < 10; i++){
-			// 10ms total
+		uint32_t off_time = PWM_MAX - on_time;
+		for(uint32_t i = 0; i < PWM_MAX; i++){
 			// on for on_time ms
 			led_on(state.ch0);
 			led_on(state.ch1);
 			led_on(state.ch2);
 			led_on(state.ch3);
-			delay_msec(on_time);
+			delay_usec(on_time);
 			// off for off_time ms
 			led_off(state.ch0);
 			led_off(state.ch1);
 			led_off(state.ch2);
 			led_off(state.ch3);
-			delay_msec(off_time);
+			delay_usec(off_time);
 		}
 	}
 	// update counter value
