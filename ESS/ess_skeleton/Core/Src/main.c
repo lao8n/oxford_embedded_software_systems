@@ -2,22 +2,28 @@
 #include "main.h"
 #include "ess_helper.h"
 
-// Initialize the green LED.
-void led_green_init(void);
-// Turn the green LED on
-void led_green_on(void);
-// Turn the green LED off
-void led_green_off(void);
+struct LEDstruct {
+	uint32_t * port; // led register
+	uint32_t pin; // 0..15
+};
+typedef struct LEDstruct LED_t;
 
+void led_init(LED_t *led, uint32_t * port, uint32_t pin);
+void led_on(LED_t * led);
+void led_off(LED_t * led);
 
-void led_green_init() {
-	*(uint32_t*)0x40020C14 & 0x1000;
+void led_init(LED_t *led, uint32_t * port, uint32_t pin){
+	led->port = port;
+	led->pin = pin;
+	(*led->port) &= 0x1000;
 }
-void led_green_on() {
-	*(uint32_t*)0x40020C14 | 0x1000;
+
+void led_on(LED_t * led){
+	(*led->port) |= 0x1000 << led->pin;
 }
-void led_green_off() {
-	*(uint32_t*)0x40020C14 & 0x1000;
+
+void led_off(LED_t * led){
+	(*led->port) &=~ (0x1000 << led->pin);
 }
 
 int main(void)
@@ -26,12 +32,17 @@ int main(void)
 	HAL_Init();
 	/* Initialize peripherals on board */
 	ess_helper_init();
+
+	LED_t led;
+	uint32_t * port = (uint32_t*) 0x40020C14;
+	uint32_t led_green_pin=0;
+	uint32_t led_red_pin=1;
+	uint32_t led_orange_pin=2;
+	uint32_t led_blue_pin=3;
+
 	// Set all the LEDs to on.
-	*(uint32_t*)0x40020C14 = 0xF000;
-
-	led_green_init();
-	led_green_on();
-
+	led_init(&led, port, led_blue_pin);
+	led_on(&led);
     while(1){
     }
 }
