@@ -1,0 +1,11 @@
+/**
+ * Four Channel PWM driver
+ */
+
+#ifndef PWM_DRIVER_H
+#define PWM_DRIVER_H
+
+#include <stdint.h>
+#include "led_driver.h"
+
+#define PWM_MAX 100

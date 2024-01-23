@@ -132,3 +132,21 @@ Contains: Stack data not available
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 14:37:39.891
 !MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 15:21:14.886
+!MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 15:22:44.339
+!MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 15:23:23.929
+!MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 15:24:48.276
+!MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 15:26:21.628
+!MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2024-01-23 15:27:14.160
+!MESSAGE SWV configuration; base: 2000000; minDiv: 1; maxDiv: 1; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 168000000; div: 84

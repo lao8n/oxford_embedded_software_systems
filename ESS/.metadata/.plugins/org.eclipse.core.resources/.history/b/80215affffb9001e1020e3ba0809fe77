@@ -1,0 +1,29 @@
+#include "pwm_driver.h"
+
+struct pwm_state {
+	uint32_t counter;
+	uint32_t ch0_compare;
+	uint32_t ch1_compare;
+	uint32_t ch2_compare;
+	uint32_t ch3_compare;
+	LED_t * ch0;
+	LED_t * ch1;
+	LED_t * ch2;
+	LED_t * ch3;
+};
+
+// assumes only one pwm_driver instance in the system
+static struct pwm_state state;
+
+// initialize pwm driver
+void pwm_driver_init(LED_t *ch0, LED_t *ch1, LED_t *ch2, LED_t *ch3){
+	// start counter at 0
+	state.counter = 0;
+	// set all channels to off
+
+	// store pointer for each led driver
+	state.ch0 = ch0;
+	state.ch1 = ch1;
+	state.ch2 = ch2;
+	state.ch3 = ch3;
+}

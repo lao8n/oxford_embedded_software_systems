@@ -1,0 +1,13 @@
+#include "pwm_driver.h"
+
+struct pwm_state {
+	uint32_t counter;
+	uint32_t ch0_compare;
+	uint32_t ch1_compare;
+	uint32_t ch2_compare;
+	uint32_t ch3_compare;
+	LED_t * ch0;
+	LED_t * ch1;
+	LED_t * ch2;
+	LED_t * ch3;
+};

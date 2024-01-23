@@ -123,7 +123,45 @@ void lab2(void){
 	brightness_switch(&led1, &led2);
 }
 
+#include "stm32f4xx.h"
+#include "pwm_driver.h"
+#define PORTD ((uint32_t*)0x40020C14)
+
+void lab3(void){
+	// create led adts
+	LED_t led_green;
+	LED_t led_orange;
+	LED_t led_blue;
+	LED_t led_red;
+
+	/* Initialize system */
+	HAL_Init();
+	/* Initialize peripherals on board */
+	ess_helper_init();
+
+	// set up the leds
+	led_init(&led_green, PORTD, 0);
+	led_init(&led_orange, PORTD, 1);
+	led_init(&led_blue, PORTD, 2);
+	led_init(&led_red, PORTD, 3);
+
+	// set up pwm driver
+	pwm_driver_init(&led_green, &led_red, &led_orange, &led_blue);
+
+	// set brightness values
+	pwm_driver_set(0, 100);
+	pwm_driver_set(1, 50);
+	pwm_driver_set(2, 25);
+	pwm_driver_set(3, 0);
+
+	// loop
+	while(1){
+		delay_msec(10);
+		pwm_driver_update();
+	}
+}
+
 int main(void)
 {
-	lab2();
+	lab3();
 }
