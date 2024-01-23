@@ -20,3 +20,17 @@ void delay_msec(uint32_t delay){
 		i++;
 	}
 }
+
+void button_init(Button_t * b, uint32_t port){
+	(b->port) = (uint32_t*) port;
+}
+
+void button_loop(Button_t * b, LED_t * led){
+	while(1){
+		if((*b->port)){
+			led_on(led);
+		} else {
+			led_off(led);
+		}
+	}
+}
