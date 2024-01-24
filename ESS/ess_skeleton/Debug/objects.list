@@ -1,4 +1,3 @@
-"./Core/Src/archive_main.o"
 "./Core/Src/delay_hrdw.o"
 "./Core/Src/delay_sftw.o"
 "./Core/Src/ess_helper.o"
