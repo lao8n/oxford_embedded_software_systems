@@ -1,0 +1,2 @@
+../Core/Src/int.c:7:6:TMR4_Init_ISR	16	static
+../Core/Src/int.c:33:6:TIM4_IRQHandler	8	static

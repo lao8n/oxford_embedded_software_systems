@@ -1,17 +1,41 @@
-15:38:54 **** Incremental Build of configuration Debug for project ess_skeleton ****
+16:31:08 **** Incremental Build of configuration Debug for project ess_skeleton ****
 make -j7 all 
+arm-none-eabi-gcc "../Core/Src/display_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/display_driver.d" -MT"Core/Src/display_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/display_driver.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/display_driver.c: In function 'display_init':
+../Core/Src/display_driver.c:21:2: warning: implicit declaration of function 'pwm_driver_init' [-Wimplicit-function-declaration]
+   21 |  pwm_driver_init(&led_green, &led_red, &led_orange, &led_blue);
+      |  ^~~~~~~~~~~~~~~
+../Core/Src/display_driver.c: In function 'display_tilt':
+../Core/Src/display_driver.c:25:2: warning: implicit declaration of function 'assert' [-Wimplicit-function-declaration]
+   25 |  assert(x_tilt >= -90);
+      |  ^~~~~~
+../Core/Src/display_driver.c:3:1: note: 'assert' is defined in header '<assert.h>'; did you forget to '#include <assert.h>'?
+    2 | #include "led_driver.h"
+  +++ |+#include <assert.h>
+    3 | 
+../Core/Src/display_driver.c:31:3: warning: implicit declaration of function 'pwm_driver_set' [-Wimplicit-function-declaration]
+   31 |   pwm_driver_set(GREEN, 0);
+      |   ^~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:50:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   50 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TIM4_IRQHandler'; did you mean 'FMC_IRQHandler'? [-Wimplicit-function-declaration]
+   51 |  TIM4_IRQHandler();
+      |  ^~~~~~~~~~~~~~~
+      |  FMC_IRQHandler
 arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: ess_skeleton.elf
  
 arm-none-eabi-size   ess_skeleton.elf 
 arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
    text	   data	    bss	    dec	    hex	filename
-  21980	    484	   1692	  24156	   5e5c	ess_skeleton.elf
+  25172	    484	   1780	  27436	   6b2c	ess_skeleton.elf
 Finished building: default.size.stdout
  
 Finished building: ess_skeleton.list
  
 
-15:38:54 Build Finished. 0 errors, 0 warnings. (took 936ms)
+16:31:09 Build Finished. 0 errors, 5 warnings. (took 1s.111ms)
 

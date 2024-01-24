@@ -1,6 +1,8 @@
 "./Core/Src/delay_hrdw.o"
 "./Core/Src/delay_sftw.o"
+"./Core/Src/display_driver.o"
 "./Core/Src/ess_helper.o"
+"./Core/Src/int.o"
 "./Core/Src/led_driver.o"
 "./Core/Src/main.o"
 "./Core/Src/pwm_driver.o"
