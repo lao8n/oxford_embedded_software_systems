@@ -1,0 +1,3 @@
+../Core/Src/delay_hrdw.c:8:6:delay_msec_hrdw	16	static
+../Core/Src/delay_hrdw.c:14:6:TMR4_Init	16	static
+../Core/Src/delay_hrdw.c:37:6:TMR4_WaitForExpiry	4	static

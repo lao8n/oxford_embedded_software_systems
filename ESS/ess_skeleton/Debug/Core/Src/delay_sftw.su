@@ -1,0 +1,2 @@
+../Core/Src/delay_sftw.c:3:6:delay_msec	24	static
+../Core/Src/delay_sftw.c:10:6:delay_usec	24	static
