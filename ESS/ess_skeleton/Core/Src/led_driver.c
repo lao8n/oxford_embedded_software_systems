@@ -13,17 +13,3 @@ void led_on(LED_t * led){
 void led_off(LED_t * led){
 	(*led->port) &=~ (0x1000 << led->pin);
 }
-
-void delay_msec(uint32_t delay){
-	int i = 0;
-	while(i < 20000 * delay){
-		i++;
-	}
-}
-
-void delay_usec(uint32_t delay){
-	int i = 0;
-	while(i < 20 * delay){
-		i++;
-	}
-}

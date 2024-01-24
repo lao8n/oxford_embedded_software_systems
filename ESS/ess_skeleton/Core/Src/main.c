@@ -127,6 +127,9 @@ void lab2(void){
 #include "pwm_driver.h"
 #define PORTD ((uint32_t*)0x40020C14)
 
+void TMR4_Init(void);
+void TMR4_WaitForExpiry(void);
+
 void lab3(void){
 	// create led adts
 	LED_t led_green;
@@ -154,9 +157,11 @@ void lab3(void){
 	pwm_driver_set(2, 50);
 	pwm_driver_set(3, 100);
 
+	TMR4_Init();
 	// loop
 	while(1){
-		delay_msec(1);
+		//delay_msec(1);
+		TMR4_WaitForExpiry();
 		pwm_driver_update();
 	}
 }
@@ -171,7 +176,7 @@ void TMR4_Init(void){
 	// timer tick frequency = 8400000 / (0 + 1) = 84000000
 	TIM_Handle.Init.Prescaler = 0;
 	/* Count up */
-	TIM_Handle.Init.CounterMode = TIME_COUNTERMODE_UP;
+	TIM_Handle.Init.CounterMode = TIM_COUNTERMODE_UP;
 
 	/*
 	 * Set timer period when it must reset

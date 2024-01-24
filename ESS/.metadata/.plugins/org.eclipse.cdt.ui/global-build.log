@@ -1614,3 +1614,128 @@ arm-none-eabi-size   ess_skeleton.elf
   21276	    484	   1628	  23388	   5b5c	ess_skeleton.elf
 Finished building: default.size.stdout
  
+13:55:35 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'lab3':
+../Core/Src/main.c:157:2: warning: implicit declaration of function 'TMR4_Init' [-Wimplicit-function-declaration]
+  157 |  TMR4_Init();
+      |  ^~~~~~~~~
+../Core/Src/main.c:161:3: warning: implicit declaration of function 'TMR4_WaitForExpiry' [-Wimplicit-function-declaration]
+  161 |   TMR4_WaitForExpiry();
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:170:6: warning: conflicting types for 'TMR4_Init'
+  170 | void TMR4_Init(void){
+      |      ^~~~~~~~~
+../Core/Src/main.c:157:2: note: previous implicit declaration of 'TMR4_Init' was here
+  157 |  TMR4_Init();
+      |  ^~~~~~~~~
+../Core/Src/main.c: In function 'TMR4_Init':
+../Core/Src/main.c:176:32: error: 'TIME_COUNTERMODE_UP' undeclared (first use in this function); did you mean 'TIM_COUNTERMODE_UP'?
+  176 |  TIM_Handle.Init.CounterMode = TIME_COUNTERMODE_UP;
+      |                                ^~~~~~~~~~~~~~~~~~~
+      |                                TIM_COUNTERMODE_UP
+../Core/Src/main.c:176:32: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:193:6: warning: conflicting types for 'TMR4_WaitForExpiry'
+  193 | void TMR4_WaitForExpiry(void){
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:161:3: note: previous implicit declaration of 'TMR4_WaitForExpiry' was here
+  161 |   TMR4_WaitForExpiry();
+      |   ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+13:56:58 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'lab3':
+../Core/Src/main.c:157:2: warning: implicit declaration of function 'TMR4_Init' [-Wimplicit-function-declaration]
+  157 |  TMR4_Init();
+      |  ^~~~~~~~~
+../Core/Src/main.c:161:3: warning: implicit declaration of function 'TMR4_WaitForExpiry' [-Wimplicit-function-declaration]
+  161 |   TMR4_WaitForExpiry();
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:170:6: warning: conflicting types for 'TMR4_Init'
+  170 | void TMR4_Init(void);
+      |      ^~~~~~~~~
+../Core/Src/main.c:157:2: note: previous implicit declaration of 'TMR4_Init' was here
+  157 |  TMR4_Init();
+      |  ^~~~~~~~~
+../Core/Src/main.c:171:6: warning: conflicting types for 'TMR4_WaitForExpiry'
+  171 | void TMR4_WaitForExpiry(void);
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:161:3: note: previous implicit declaration of 'TMR4_WaitForExpiry' was here
+  161 |   TMR4_WaitForExpiry();
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'TMR4_Init':
+../Core/Src/main.c:179:32: error: 'TIME_COUNTERMODE_UP' undeclared (first use in this function); did you mean 'TIM_COUNTERMODE_UP'?
+  179 |  TIM_Handle.Init.CounterMode = TIME_COUNTERMODE_UP;
+      |                                ^~~~~~~~~~~~~~~~~~~
+      |                                TIM_COUNTERMODE_UP
+../Core/Src/main.c:179:32: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+13:57:22 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'lab3':
+../Core/Src/main.c:157:2: warning: implicit declaration of function 'TMR4_Init' [-Wimplicit-function-declaration]
+  157 |  TMR4_Init();
+      |  ^~~~~~~~~
+../Core/Src/main.c:161:3: warning: implicit declaration of function 'TMR4_WaitForExpiry' [-Wimplicit-function-declaration]
+  161 |   TMR4_WaitForExpiry();
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:170:6: warning: conflicting types for 'TMR4_Init'
+  170 | void TMR4_Init(void);
+      |      ^~~~~~~~~
+../Core/Src/main.c:157:2: note: previous implicit declaration of 'TMR4_Init' was here
+  157 |  TMR4_Init();
+      |  ^~~~~~~~~
+../Core/Src/main.c:171:6: warning: conflicting types for 'TMR4_WaitForExpiry'
+  171 | void TMR4_WaitForExpiry(void);
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:161:3: note: previous implicit declaration of 'TMR4_WaitForExpiry' was here
+  161 |   TMR4_WaitForExpiry();
+      |   ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  21884	    484	   1692	  24060	   5dfc	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+13:58:12 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  21884	    484	   1692	  24060	   5dfc	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+13:58:49 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  21892	    484	   1692	  24068	   5e04	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
