@@ -4,13 +4,13 @@
 #include "stdio.h"
 #include "delay.h"
 
-int _write(int file, char *ptr, int len){
-	int i = 0;
-	for(i = 0; i < len; i++){
-		ITM_SendChar((*ptr++));
-	}
-	return len;
-}
+//int _write(int file, char *ptr, int len){
+//	int i = 0;
+//	for(i = 0; i < len; i++){
+//		ITM_SendChar((*ptr++));
+//	}
+//	return len;
+//}
 
 void lab1(void){
 	/* Initialize system */
@@ -161,7 +161,7 @@ void lab3(void){
 	}
 }
 
-int main(void)
-{
-	lab3();
-}
+// int main(void)
+// {
+// 	lab3();
+// }

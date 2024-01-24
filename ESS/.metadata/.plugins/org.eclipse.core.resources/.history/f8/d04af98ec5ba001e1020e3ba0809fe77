@@ -1,0 +1,52 @@
+/* Includes ------------------------------------------------------------------*/
+#include "ess_helper.h"
+#include "led_driver.h"
+#include "stdio.h"
+#include "delay.h"
+#include "stm32f4xx.h"
+#include "pwm_driver.h"
+#include "stm3332f4xx_hal_tim.h"
+
+#define PORTD ((uint32_t*)0x40020C14)
+
+int _write(int file, char *ptr, int len){
+	int i = 0;
+	for(i = 0; i < len; i++){
+		ITM_SendChar((*ptr++));
+	}
+	return len;
+}
+
+int main(void){
+	// create led adts
+	LED_t led_green;
+	LED_t led_orange;
+	LED_t led_blue;
+	LED_t led_red;
+
+	/* Initialize system */
+	HAL_Init();
+	/* Initialize peripherals on board */
+	ess_helper_init();
+
+	// set up the leds
+	led_init(&led_green, PORTD, 0);
+	led_init(&led_orange, PORTD, 1);
+	led_init(&led_blue, PORTD, 2);
+	led_init(&led_red, PORTD, 3);
+
+	// set up pwm driver
+	pwm_driver_init(&led_green, &led_red, &led_orange, &led_blue);
+
+	// set brightness values
+	pwm_driver_set(0, 0);
+	pwm_driver_set(1, 25);
+	pwm_driver_set(2, 50);
+	pwm_driver_set(3, 100);
+
+	// loop
+	while(1){
+		delay_msec(1);
+		pwm_driver_update();
+	}
+}

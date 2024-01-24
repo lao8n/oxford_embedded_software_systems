@@ -1,6 +1,7 @@
 #include "pwm_driver.h"
 #include <assert.h>
 #include "led_driver.h"
+#include "delay.h"
 
 struct pwm_state {
 	uint32_t counter;

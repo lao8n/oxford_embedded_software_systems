@@ -1,0 +1,6 @@
+../Core/Src/archive_main.c:15:6:lab1	40	static
+../Core/Src/archive_main.c:60:6:brightness	24	static
+../Core/Src/archive_main.c:71:6:brightness_smooth	32	static
+../Core/Src/archive_main.c:89:6:brightness_switch	32	static
+../Core/Src/archive_main.c:109:6:lab2	40	static
+../Core/Src/archive_main.c:130:6:lab3	40	static
