@@ -1,0 +1,7 @@
+main.c:12:5:_write	12	static,ignoring_inline_asm
+main.c:20:6:delay_usec	8	static
+main.c:36:6:TMR4_Init_ISR	24	static
+main.c:67:6:TIM4_IRQHandler	0	static
+main.c:82:6:TMR3_Init_ISR	24	static
+main.c:112:6:TIM3_IRQHandler	0	static
+main.c:133:5:main	184	static

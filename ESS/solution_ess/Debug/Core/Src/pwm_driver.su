@@ -1,0 +1,3 @@
+pwm_driver.c:29:6:pwm_driver_init	8	static
+pwm_driver.c:42:6:pwm_driver_set	0	static
+pwm_driver.c:64:6:pwm_driver_update	8	static

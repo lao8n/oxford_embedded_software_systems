@@ -1,0 +1,2 @@
+tmp_driver.c:17:6:tmp_sensor_init	40	static
+tmp_driver.c:42:6:get_tmp_value	16	static
