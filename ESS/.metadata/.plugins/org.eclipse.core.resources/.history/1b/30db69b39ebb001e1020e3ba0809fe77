@@ -1,0 +1,8 @@
+#include "acc.h"
+
+void AccInit(void){
+
+}
+void AccRead(acc3_t * reading){
+
+}

@@ -32,7 +32,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/ess_helper.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Core/Inc/stm32f4xx_it.h ../Core/Inc/pwm_driver.h \
  ../Core/Inc/led_driver.h ../Core/Inc/stm32f4xx_it.h \
- ../Core/Inc/display_driver.h ../Core/Inc/spi_driver.h
+ ../Core/Inc/display_driver.h ../Core/Inc/spi_driver.h ../Core/Inc/acc.h
 ../Core/Inc/ess_helper.h:
 ../Core/Inc/led_driver.h:
 ../Core/Inc/delay.h:
@@ -73,3 +73,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/ess_helper.h \
 ../Core/Inc/stm32f4xx_it.h:
 ../Core/Inc/display_driver.h:
 ../Core/Inc/spi_driver.h:
+../Core/Inc/acc.h:

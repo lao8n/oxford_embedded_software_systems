@@ -1,0 +1,38 @@
+/* Includes ------------------------------------------------------------------*/
+#include "ess_helper.h"
+#include "led_driver.h"
+#include "stdio.h"
+#include "delay.h"
+#include "stm32f4xx.h"
+#include "pwm_driver.h"
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_it.h"
+#include "display_driver.h"
+#include "spi_driver.h"
+
+int _write(int file, char *ptr, int len){
+	int i = 0;
+	for(i = 0; i < len; i++){
+		ITM_SendChar((*ptr++));
+	}
+	return len;
+}
+
+int main(void){
+	/* Initialize system */
+	HAL_Init();
+	/* Initialize peripherals on board */
+	ess_helper_init();
+
+	display_init();
+
+	AccInit();
+	TMR4_Init_ISR();
+	acc3 reading;
+	// loop
+	while(1){
+
+		display_axis(x_axis, GREEN, RED);
+		display_axis(y_axis, ORANGE, BLUE);
+	};
+}
