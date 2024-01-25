@@ -1,0 +1,10 @@
+#include "stdint.h"
+
+typedef enum {
+	GREEN = 0,
+	ORANGE,
+	BLUE,
+	RED} colour_t;
+
+void display_init(void);
+void display_tilt(int8_t axis, colour_t neg, colour_t pos);

@@ -7,40 +7,51 @@
 
 void display_init(void){
 	// create led adts
-	LED_t led_green;
-	LED_t led_orange;
-	LED_t led_blue;
-	LED_t led_red;
+	static LED_t led_green;
+	static LED_t led_orange;
+	static LED_t led_blue;
+	static LED_t led_red;
 
 	// set up the leds
-	led_init(&led_green, PORTD, 0);
-	led_init(&led_orange, PORTD, 1);
-	led_init(&led_blue, PORTD, 2);
-	led_init(&led_red, PORTD, 3);
+	led_init(&led_green, PORTD, GREEN);
+	led_init(&led_orange, PORTD, ORANGE);
+	led_init(&led_blue, PORTD, BLUE);
+	led_init(&led_red, PORTD, RED);
 
 	// set up pwm driver
 	pwm_driver_init(&led_green, &led_red, &led_orange, &led_blue);
+
+	// set brightness values
+	pwm_driver_set(GREEN, 0);
+	pwm_driver_set(ORANGE, 0);
+	pwm_driver_set(BLUE, 0);
+	pwm_driver_set(RED, 0);
 }
 
-void display_tilt(int8_t x_tilt, int8_t y_tilt){
-	assert(x_tilt >= -90);
-	assert(x_tilt <= 90);
-	assert(y_tilt >= -90);
-	assert(y_tilt <= 90);
 
-	if(x_tilt >= 0){
-		pwm_driver_set(GREEN, 0);
-		// brightness
-		pwm_driver_set(RED, 100);
+void display_axis(int16_t axis, colour_t neg, colour_t pos){
+	if(axis < -2000) {
+		pwm_driver_set(neg, 100);
+		pwm_driver_set(pos, 0);
+	} else if (axis > 2000) {
+		pwm_driver_set(pos, 100);
+		pwm_driver_set(neg, 0);
+	} else if (axis < -1000){
+		// -1000 to -2000 go from 0 to 100 in brightness
+		// -1000 -> 0 brightness
+		// -2000 -> 1 brightness
+		uint8_t brightness = (axis + 1000)/-10;
+		pwm_driver_set(neg, brightness);
+		pwm_driver_set(pos, 0);
+	} else if (axis > 1000){
+		// 1000 to 2000 go from 0 to 100 in brightness
+		// 1000 -> 0 brightness
+		// 2000 -> 100 brightness
+		uint8_t brightness = (axis - 1000)/10;
+		pwm_driver_set(pos, brightness);
+		pwm_driver_set(neg, 0);
 	} else {
-		pwm_driver_set(RED, 0);
-		pwm_driver_set(GREEN, 100);
-	}
-	if(y_tilt >= 0){
-		pwm_driver_set(BLUE, 0);
-		pwm_driver_set(ORANGE, 100);
-	} else {
-		pwm_driver_set(ORANGE, 0);
-		pwm_driver_set(BLUE, 100);
+		pwm_driver_set(pos, 0);
+		pwm_driver_set(neg, 0);
 	}
 }
