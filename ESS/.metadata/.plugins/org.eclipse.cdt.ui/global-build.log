@@ -3269,3 +3269,467 @@ Finished building: default.size.stdout
  
 Finished building: ess_skeleton.list
  
+14:30:27 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/int.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/int.d" -MT"Core/Src/int.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/int.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/int.c: In function 'TIM4_IRQHandler':
+../Core/Src/int.c:38:4: warning: implicit declaration of function 'pwm_driver_update' [-Wimplicit-function-declaration]
+   38 |    pwm_driver_update();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/int.c:40:4: warning: implicit declaration of function 'SPIAcc_Get' [-Wimplicit-function-declaration]
+   40 |    SPIAcc_Get(28, data_h, 1); // OUT_X_H
+      |    ^~~~~~~~~~
+../Core/Src/int.c:43:22: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   43 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                      ^
+../Core/Src/int.c:43:21: warning: initialization of 'int16_t' {aka 'short int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+   43 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                     ^
+../Core/Src/int.c:44:7: error: 'x' undeclared (first use in this function)
+   44 |    if(x < 0) {
+      |       ^
+../Core/Src/int.c:44:7: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/int.c:45:5: warning: implicit declaration of function 'pwm_driver_set' [-Wimplicit-function-declaration]
+   45 |     pwm_driver_set(GREEN, 0);
+      |     ^~~~~~~~~~~~~~
+../Core/Src/int.c:45:20: error: 'GREEN' undeclared (first use in this function)
+   45 |     pwm_driver_set(GREEN, 0);
+      |                    ^~~~~
+../Core/Src/int.c:47:20: error: 'RED' undeclared (first use in this function)
+   47 |     pwm_driver_set(RED, 0);
+      |                    ^~~
+../Core/Src/int.c:43:12: warning: unused variable 'x_axis' [-Wunused-variable]
+   43 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |            ^~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/int.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:50:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   50 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TIM4_IRQHandler'; did you mean 'FMC_IRQHandler'? [-Wimplicit-function-declaration]
+   51 |  TIM4_IRQHandler();
+      |  ^~~~~~~~~~~~~~~
+      |  FMC_IRQHandler
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+14:31:18 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/int.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/int.d" -MT"Core/Src/int.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/int.o"
+../Core/Src/int.c: In function 'TIM4_IRQHandler':
+../Core/Src/int.c:39:4: warning: implicit declaration of function 'pwm_driver_update' [-Wimplicit-function-declaration]
+   39 |    pwm_driver_update();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/int.c:41:4: warning: implicit declaration of function 'SPIAcc_Get' [-Wimplicit-function-declaration]
+   41 |    SPIAcc_Get(28, data_h, 1); // OUT_X_H
+      |    ^~~~~~~~~~
+../Core/Src/int.c:44:22: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   44 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                      ^
+../Core/Src/int.c:44:21: warning: initialization of 'int16_t' {aka 'short int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+   44 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                     ^
+../Core/Src/int.c:45:7: error: 'x' undeclared (first use in this function)
+   45 |    if(x < 0) {
+      |       ^
+../Core/Src/int.c:45:7: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/int.c:46:5: warning: implicit declaration of function 'pwm_driver_set' [-Wimplicit-function-declaration]
+   46 |     pwm_driver_set(GREEN, 0);
+      |     ^~~~~~~~~~~~~~
+../Core/Src/int.c:44:12: warning: unused variable 'x_axis' [-Wunused-variable]
+   44 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |            ^~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/int.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+14:31:39 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/int.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/int.d" -MT"Core/Src/int.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/int.o"
+../Core/Src/int.c: In function 'TIM4_IRQHandler':
+../Core/Src/int.c:39:4: warning: implicit declaration of function 'pwm_driver_update' [-Wimplicit-function-declaration]
+   39 |    pwm_driver_update();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/int.c:41:4: warning: implicit declaration of function 'SPIAcc_Get' [-Wimplicit-function-declaration]
+   41 |    SPIAcc_Get(28, data_h, 1); // OUT_X_H
+      |    ^~~~~~~~~~
+../Core/Src/int.c:44:22: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   44 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                      ^
+../Core/Src/int.c:44:21: warning: initialization of 'int16_t' {aka 'short int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+   44 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                     ^
+../Core/Src/int.c:46:5: warning: implicit declaration of function 'pwm_driver_set' [-Wimplicit-function-declaration]
+   46 |     pwm_driver_set(GREEN, 0);
+      |     ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25340	    484	   1780	  27604	   6bd4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+14:32:11 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25340	    484	   1780	  27604	   6bd4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+14:33:49 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:50:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   50 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TIM4_IRQHandler'; did you mean 'FMC_IRQHandler'? [-Wimplicit-function-declaration]
+   51 |  TIM4_IRQHandler();
+      |  ^~~~~~~~~~~~~~~
+      |  FMC_IRQHandler
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25340	    484	   1780	  27604	   6bd4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+14:34:28 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/int.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/int.d" -MT"Core/Src/int.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/int.o"
+../Core/Src/int.c: In function 'TIM4_IRQHandler':
+../Core/Src/int.c:40:4: warning: implicit declaration of function 'SPIAcc_Get' [-Wimplicit-function-declaration]
+   40 |    SPIAcc_Get(28, data_h, 1); // OUT_X_H
+      |    ^~~~~~~~~~
+../Core/Src/int.c:43:22: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   43 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                      ^
+../Core/Src/int.c:43:21: warning: initialization of 'int16_t' {aka 'short int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+   43 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                     ^
+../Core/Src/int.c:45:5: warning: implicit declaration of function 'pwm_driver_set' [-Wimplicit-function-declaration]
+   45 |     pwm_driver_set(GREEN, 0);
+      |     ^~~~~~~~~~~~~~
+../Core/Src/int.c:49:4: warning: implicit declaration of function 'pwm_driver_update' [-Wimplicit-function-declaration]
+   49 |    pwm_driver_update();
+      |    ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25340	    484	   1780	  27604	   6bd4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+14:35:06 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25340	    484	   1780	  27604	   6bd4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+14:36:52 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/int.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/int.d" -MT"Core/Src/int.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/int.o"
+../Core/Src/int.c: In function 'TIM4_IRQHandler':
+../Core/Src/int.c:40:4: warning: implicit declaration of function 'SPIAcc_Get' [-Wimplicit-function-declaration]
+   40 |    SPIAcc_Get(28, data_h, 1); // OUT_X_H
+      |    ^~~~~~~~~~
+../Core/Src/int.c:43:22: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   43 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                      ^
+../Core/Src/int.c:43:21: warning: initialization of 'int16_t' {aka 'short int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+   43 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                     ^
+../Core/Src/int.c:45:5: warning: implicit declaration of function 'pwm_driver_set' [-Wimplicit-function-declaration]
+   45 |     pwm_driver_set(GREEN, 100);
+      |     ^~~~~~~~~~~~~~
+../Core/Src/int.c:51:4: warning: implicit declaration of function 'pwm_driver_update' [-Wimplicit-function-declaration]
+   51 |    pwm_driver_update();
+      |    ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25356	    484	   1780	  27620	   6be4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+14:38:11 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25356	    484	   1780	  27620	   6be4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+14:41:23 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25356	    484	   1780	  27620	   6be4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+14:42:04 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25356	    484	   1780	  27620	   6be4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+14:43:56 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25356	    484	   1780	  27620	   6be4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+14:44:56 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:50:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   50 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25348	    484	   1780	  27612	   6bdc	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+14:48:59 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/int.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/int.d" -MT"Core/Src/int.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/int.o"
+../Core/Src/int.c: In function 'TIM4_IRQHandler':
+../Core/Src/int.c:40:4: warning: implicit declaration of function 'SPIAcc_Get' [-Wimplicit-function-declaration]
+   40 |    SPIAcc_Get(0x28, data_h, 1); // OUT_X_H
+      |    ^~~~~~~~~~
+../Core/Src/int.c:43:22: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   43 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                      ^
+../Core/Src/int.c:43:21: warning: initialization of 'int16_t' {aka 'short int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+   43 |    int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                     ^
+../Core/Src/int.c:45:5: warning: implicit declaration of function 'pwm_driver_set' [-Wimplicit-function-declaration]
+   45 |     pwm_driver_set(GREEN, 100);
+      |     ^~~~~~~~~~~~~~
+../Core/Src/int.c:51:4: warning: implicit declaration of function 'pwm_driver_update' [-Wimplicit-function-declaration]
+   51 |    pwm_driver_update();
+      |    ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25348	    484	   1780	  27612	   6bdc	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+14:52:46 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25348	    484	   1780	  27612	   6bdc	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+14:53:22 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   51 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25348	    484	   1780	  27612	   6bdc	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+14:56:23 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/int.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/int.d" -MT"Core/Src/int.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/int.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/int.c: In function 'TIM4_IRQHandler':
+../Core/Src/int.c:39:4: warning: implicit declaration of function 'pwm_driver_update' [-Wimplicit-function-declaration]
+   39 |    pwm_driver_update();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   51 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+../Core/Src/main.c:65:21: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   65 |   int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                     ^
+../Core/Src/main.c:65:20: warning: initialization of 'int16_t' {aka 'short int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+   65 |   int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+      |                    ^
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25348	    484	   1780	  27612	   6bdc	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+14:58:02 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25348	    484	   1780	  27612	   6bdc	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+15:00:02 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25348	    484	   1780	  27612	   6bdc	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+15:04:18 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   51 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25356	    484	   1780	  27620	   6be4	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+15:13:25 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   51 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25516	    484	   1780	  27780	   6c84	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+15:14:15 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25516	    484	   1780	  27780	   6c84	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+15:17:46 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-size   ess_skeleton.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25516	    484	   1780	  27780	   6c84	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+15:19:52 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   51 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25516	    484	   1780	  27780	   6c84	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+15:24:25 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   51 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25508	    484	   1780	  27772	   6c7c	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+15:29:17 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   51 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25492	    484	   1780	  27756	   6c6c	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
+15:30:09 **** Incremental Build of configuration Debug for project ess_skeleton ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:51:2: warning: implicit declaration of function 'TMR4_Init_ISR' [-Wimplicit-function-declaration]
+   51 |  TMR4_Init_ISR();
+      |  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ess_skeleton.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/ess04/oxford_embedded_software_systems/ESS/ess_skeleton/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ess_skeleton.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ess_skeleton.elf
+ 
+arm-none-eabi-size   ess_skeleton.elf 
+arm-none-eabi-objdump -h -S  ess_skeleton.elf  > "ess_skeleton.list"
+   text	   data	    bss	    dec	    hex	filename
+  25492	    484	   1780	  27756	   6c6c	ess_skeleton.elf
+Finished building: default.size.stdout
+ 
+Finished building: ess_skeleton.list
+ 
