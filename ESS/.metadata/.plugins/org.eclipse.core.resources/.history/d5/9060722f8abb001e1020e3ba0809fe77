@@ -60,7 +60,7 @@ int main(void){
 	SPIAcc_Get(28, data_h, 1); // OUT_X_H
 	uint8_t data_l[1];
 	SPIAcc_Get(29, data_l, 1); // OUT_X_L
-	int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+	int16_t x_axis = (data_h << 8) + data_l;
 	// loop
 	while(1){};
 }

@@ -1,2 +1,2 @@
-../Core/Src/display_driver.c:7:6:display_init	40	static
-../Core/Src/display_driver.c:24:6:display_tilt	16	static
+../Core/Src/display_driver.c:8:6:display_init	40	static
+../Core/Src/display_driver.c:25:6:display_tilt	16	static

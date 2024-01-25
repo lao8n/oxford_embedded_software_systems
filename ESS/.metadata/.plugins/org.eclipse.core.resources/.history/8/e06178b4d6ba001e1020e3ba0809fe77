@@ -52,15 +52,7 @@ int main(void){
 
 	SPIAcc_Init();
 	uint8_t buffer[1];
-	SPIAcc_Get(0x0F, buffer, 1); // WHOAMI
-	// set fastest sampling rate
-	buffer[1] = 0x87;
-	SPIAcc_Send(20, buffer, 1); // CTRL_REG1
-	uint8_t data_h[1];
-	SPIAcc_Get(28, data_h, 1); // OUT_X_H
-	uint8_t data_l[1];
-	SPIAcc_Get(29, data_l, 1); // OUT_X_L
-	int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+	SPIAcc_Get(0x0F, buffer, 1);
 	// loop
 	while(1){};
 }

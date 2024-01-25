@@ -56,11 +56,11 @@ int main(void){
 	// set fastest sampling rate
 	buffer[1] = 0x87;
 	SPIAcc_Send(20, buffer, 1); // CTRL_REG1
-	uint8_t data_h[1];
-	SPIAcc_Get(28, data_h, 1); // OUT_X_H
-	uint8_t data_l[1];
-	SPIAcc_Get(29, data_l, 1); // OUT_X_L
-	int16_t x_axis = ((int16_t)data_h << 8) + data_l;
+	uint8_t datah[1];
+	SPIAcc_Get(28, datah, 1); // OUT_X_H
+	uint8_t datal[1];
+	SPIAcc_Get(29, datal, 1); // OUT_X_L
+	buffer[2]// OUT_X_H
 	// loop
 	while(1){};
 }
