@@ -2059,6 +2059,8 @@ int _write(int file, char *ptr, int len){
 
 08001406 <main>:
 
+
+
 int main(void){
  8001406:	b580      	push	{r7, lr}
  8001408:	b082      	sub	sp, #8

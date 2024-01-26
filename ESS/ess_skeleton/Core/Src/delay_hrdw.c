@@ -1,13 +1,8 @@
 #include "main.h"
 
-#include "stm32f4xx_hal_tim.h"
-
-void TMR4_Init(void);
-void TMR4_WaitForExpiry(void);
-void delay_msec_hrdw(uint32_t delay);
-void delay_msec_hrdw(uint32_t delay){
-	TMR4_WaitForExpiry();
-}
+// void delay_msec_hrdw(uint32_t delay){
+// 	TMR4_WaitForExpiry();
+// }
 
 // TIM_HandleTypeDef TIM_Handle;
 

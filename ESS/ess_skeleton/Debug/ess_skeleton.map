@@ -212,13 +212,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./Core/Src/delay_hrdw.o
  .data          0x0000000000000000        0x0 ./Core/Src/delay_hrdw.o
  .bss           0x0000000000000000        0x0 ./Core/Src/delay_hrdw.o
- .text.delay_msec_hrdw
-                0x0000000000000000       0x14 ./Core/Src/delay_hrdw.o
- .debug_info    0x0000000000000000       0xb9 ./Core/Src/delay_hrdw.o
- .debug_abbrev  0x0000000000000000       0x7a ./Core/Src/delay_hrdw.o
+ .debug_info    0x0000000000000000       0x6f ./Core/Src/delay_hrdw.o
+ .debug_abbrev  0x0000000000000000       0x29 ./Core/Src/delay_hrdw.o
  .debug_aranges
-                0x0000000000000000       0x20 ./Core/Src/delay_hrdw.o
- .debug_ranges  0x0000000000000000       0x10 ./Core/Src/delay_hrdw.o
+                0x0000000000000000       0x18 ./Core/Src/delay_hrdw.o
  .debug_macro   0x0000000000000000      0x1fb ./Core/Src/delay_hrdw.o
  .debug_macro   0x0000000000000000      0xa78 ./Core/Src/delay_hrdw.o
  .debug_macro   0x0000000000000000      0x29a ./Core/Src/delay_hrdw.o
@@ -262,10 +259,9 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x8a0 ./Core/Src/delay_hrdw.o
  .debug_macro   0x0000000000000000       0x47 ./Core/Src/delay_hrdw.o
  .debug_macro   0x0000000000000000      0x12d ./Core/Src/delay_hrdw.o
- .debug_line    0x0000000000000000      0x727 ./Core/Src/delay_hrdw.o
- .debug_str     0x0000000000000000    0xc662c ./Core/Src/delay_hrdw.o
+ .debug_line    0x0000000000000000      0x712 ./Core/Src/delay_hrdw.o
+ .debug_str     0x0000000000000000    0xc65ef ./Core/Src/delay_hrdw.o
  .comment       0x0000000000000000       0x51 ./Core/Src/delay_hrdw.o
- .debug_frame   0x0000000000000000       0x34 ./Core/Src/delay_hrdw.o
  .ARM.attributes
                 0x0000000000000000       0x34 ./Core/Src/delay_hrdw.o
  .group         0x0000000000000000        0xc ./Core/Src/delay_sftw.o

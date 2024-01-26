@@ -19,6 +19,8 @@ int _write(int file, char *ptr, int len){
 	return len;
 }
 
+
+
 int main(void){
 	/* Initialize system */
 	HAL_Init();
@@ -28,6 +30,7 @@ int main(void){
 	display_init();
 
 	AccInit();
+	TMR3_Init_ISR();
 	TMR4_Init_ISR();
 	acc3_t reading;
 	// loop
